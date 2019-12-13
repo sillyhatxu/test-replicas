@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  remind-backend:
+    image: xushikuan/test-replicas:latest
+    ports:
+      - 8888:8888
+    deploy:
+      replicas: 2
+      restart_policy:
+        max_attempts: 2
